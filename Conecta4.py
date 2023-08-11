@@ -81,7 +81,6 @@ def ganar():
             if contador_columna >= 4:
                 return True
     # Comprobación de las diagonales:
-    contador_diagonales=0
     for i in range(len(diagonales)):
         contador_diagonales = 0
         for j in range(len(diagonales[i])):
