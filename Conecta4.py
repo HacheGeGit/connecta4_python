@@ -1,4 +1,3 @@
-#4 en raya
 import os
 import platform
 from copy import deepcopy
@@ -33,7 +32,7 @@ def limpiar_pantalla():
 def jugada():
     while True:
         try:
-            poner_ficha = int(input("¿En qué casilla desea poner la ficha? "))
+            poner_ficha = int(input("¿En qué columna desea poner la ficha? "))
             x = jugadas[poner_ficha][0]
             y = jugadas[poner_ficha][1]
             if numero_fichas == 0 or numero_fichas %2 == 0:
@@ -43,7 +42,7 @@ def jugada():
             if x >= 1 and x <=7 and y >= 1 and y <= 7:
                 return x, y, ficha, poner_ficha
         except:
-            print("La coordenada introducida no es válida.")
+            print("La colmna {} introducida no pertenece al tablero.".format(poner_ficha))
 
 def meter_ficha(x, y, ficha, numero_fichas, poner_ficha):
     try:
@@ -81,6 +80,7 @@ def ganar():
             if contador_columna >= 4:
                 return True
     # Comprobación de las diagonales:
+    contador_diagonales=0
     for i in range(len(diagonales)):
         contador_diagonales = 0
         for j in range(len(diagonales[i])):
@@ -93,11 +93,12 @@ def ganar():
             if contador_diagonales >= 4:
                 return True
     # Comprobación de las diagonales en sentido inverso:     
-    for i in range(len(diagonales)):
+    for i in range(len(diagonales_negativas)):
         contador_diagonales = 0
-        for j in range(len(diagonales[i])):
-            y = diagonales[i][j][0]
-            x = diagonales[i][j][1]
+        for j in range(len(diagonales_negativas[i])):
+            print(contador_diagonales)
+            x = diagonales_negativas[i][j][0]
+            y = diagonales_negativas[i][j][1]
             if tablero[x][y] == ficha:
                 contador_diagonales+=1
             else:
@@ -119,8 +120,8 @@ jugadas =  {1:[6,1],
 
                 #Diagonal principal
 diagonales = {0:[[6,1],[5,2],[4,3],[3,4]],
-              1:[[5,2],[4,3],[3,2],[2,5]],
-              2:[[4,3],[3,2],[2,5],[1,6]],
+              1:[[5,2],[4,3],[3,4],[2,5]],
+              2:[[4,3],[3,4],[2,5],[1,6]],
                 #Diagonales secundarias
               3:[[5,1],[4,2],[3,3],[2,4]],
               4:[[4,2],[3,3],[2,2],[1,5]],
@@ -128,6 +129,18 @@ diagonales = {0:[[6,1],[5,2],[4,3],[3,4]],
               6:[[6,2],[5,3],[4,4],[3,5]],
               7:[[5,3],[4,4],[3,5],[2,6]],
               8:[[6,3],[5,4],[4,5],[3,6]]}
+                
+                            #Diagonal principal
+diagonales_negativas = {0:[[6,6],[5,5],[4,4],[3,3]],
+                        1:[[5,5],[4,4],[3,3],[2,2]],
+                        2:[[4,4],[3,3],[2,2],[1,1]],
+                            #Diagonales secundarias
+                        3:[[5,6],[4,5],[3,4],[2,3]],
+                        4:[[4,5],[3,4],[2,3],[1,2]],
+                        5:[[6,5],[5,4],[4,3],[3,2]],
+                        6:[[5,6],[4,5],[3,4],[2,3]],
+                        7:[[4,5],[3,4],[2,3],[1,2]],
+                        8:[[4,6],[3,5],[2,4],[1,3]]}
 
 jugadas_plantilla = deepcopy(jugadas)
 ficha_roja = Fore.RED+str('0')+Fore.RESET
