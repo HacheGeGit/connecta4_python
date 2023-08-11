@@ -96,15 +96,15 @@ def ganar():
     # Comprobación de las diagonales en sentido inverso:     
     for i in range(len(diagonales)):
         contador_diagonales = 0
-    for j in range(len(diagonales[i])):
-        y = diagonales[i][j][0]
-        x = diagonales[i][j][1]
-        if tablero[x][y] == ficha:
-            contador_diagonales+=1
-        else:
-            contador_diagonales = 0
-        if contador_diagonales >= 4:
-            return True
+        for j in range(len(diagonales[i])):
+            y = diagonales[i][j][0]
+            x = diagonales[i][j][1]
+            if tablero[x][y] == ficha:
+                contador_diagonales+=1
+            else:
+                contador_diagonales = 0
+            if contador_diagonales >= 4:
+                return True
                 
 def empatar():
     if numero_fichas == 36:
