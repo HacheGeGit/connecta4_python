@@ -10,3 +10,4 @@ Se realiza la comprobación a partir de la cuarta ficha que se ponga en el table
 
 En el caso de las diagonales el funcionamiento es distinto. En vez de recorrer el tablero, se recorre un diccionario que guarda las posibles 9 diagonales, si estas coinciden con la ficha, se retornará True acabando así la partida. Para las diagonales negativas se recorren el diccionario invirtiendo los índices.
 
+Este ejercicio se realizó como parte de un examen de la asignatura Sistemas de gestión empresarial de 2º de DAM en la que se estudia Python para el desarrollo en el ORM Odoo.
