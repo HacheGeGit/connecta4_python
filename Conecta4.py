@@ -42,7 +42,7 @@ def jugada():
             if x >= 1 and x <=7 and y >= 1 and y <= 7:
                 return x, y, ficha, poner_ficha
         except:
-            print("La colmna {} introducida no pertenece al tablero.".format(poner_ficha))
+            print("La colmna {} no pertenece al tablero.".format(poner_ficha))
 
 def meter_ficha(x, y, ficha, numero_fichas, poner_ficha):
     try:
