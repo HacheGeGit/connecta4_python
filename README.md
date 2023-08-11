@@ -1,6 +1,6 @@
 # connecta4_python
 
-El juego funciona por consola, sin interfaz gráfica. El funcionamiento es sencillo, las fcihas se colocan "dejándolas caer" en la última casilla libre del tablero por medio de un diccionario que guarda las coordenadas de cada una de las columnas y su última fila. Cuando dejamos caer una ficha, la fila de la coordenada en el diccionario de jugadas se modifica para que la siguiente ficha caiga encima de la ficha que hemos colocado antes. 
+El juego funciona por consola, sin interfaz gráfica. El funcionamiento es sencillo, las fichas se colocan "dejándolas caer" en la última casilla libre del tablero por medio de un diccionario que guarda las coordenadas de cada una de las columnas y su última fila. Cuando dejamos caer una ficha, la fila de la coordenada en el diccionario de jugadas se modifica para que la siguiente ficha caiga encima de la ficha que hemos colocado antes. 
 
 Cada jugador dispone de una ficha de un color distinto. El tablero se actualiza jugada a jugada borrando y pintando el nuevo tablero turno a turno. El juego permite empezar una nueva partida o para de jugar cuando terminas una partida. 
 
