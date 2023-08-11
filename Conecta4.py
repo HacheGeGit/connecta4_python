@@ -85,7 +85,6 @@ def ganar():
     for i in range(len(diagonales)):
         contador_diagonales = 0
         for j in range(len(diagonales[i])):
-            print(contador_diagonales)
             x = diagonales[i][j][0]
             y = diagonales[i][j][1]
             if tablero[x][y] == ficha:
@@ -98,7 +97,6 @@ def ganar():
     for i in range(len(diagonales)):
         contador_diagonales = 0
     for j in range(len(diagonales[i])):
-        print(contador_diagonales)
         y = diagonales[i][j][0]
         x = diagonales[i][j][1]
         if tablero[x][y] == ficha:
