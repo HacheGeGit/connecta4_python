@@ -63,7 +63,7 @@ def ganar():
     # Comprobación filas:
     for columna in range(len(tablero)):
         contador_fila = 0
-        for fila in range(8):
+        for fila in range(len(tablero)):
             if tablero[columna][fila] == ficha:
                 contador_fila+=1
             else: 
@@ -73,7 +73,7 @@ def ganar():
     # Comprobación columnas:
     for fila in range(len(tablero)):
         contador_columna = 0
-        for columna in range(8):
+        for columna in range(len(tablero)):
             if tablero[columna][fila] == ficha:
                 contador_columna+=1
             else: 
