@@ -50,7 +50,6 @@ def meter_ficha(x, y, ficha, numero_fichas, poner_ficha):
             tablero[x][y] = ficha
             numero_fichas+=1
             jugadas[poner_ficha][0] = jugadas[poner_ficha][0]-1
-            print(jugadas[poner_ficha][0], jugadas[poner_ficha][1])
             return tablero, numero_fichas
         else:
             print("Esa columna está llena, elija una columna vacía.")
