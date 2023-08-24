@@ -149,7 +149,7 @@ while 1:
     imprime_tablero() 
     x, y, ficha, poner_ficha = jugada()
     tablero, numero_fichas = meter_ficha(x, y, ficha, numero_fichas, poner_ficha)
-    if numero_fichas >= 0:
+    if numero_fichas >= 7:
         if ganar():
             limpiar_pantalla()
             imprime_tablero()
